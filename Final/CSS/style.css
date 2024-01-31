@@ -18,22 +18,26 @@ section{
 }
 
 #slide{
-    height: fit-content;
-    width: fit-content;
-    margin-left: 10%;
+    margin-left: 26%;
 }
 
 .pic{
     height: 300px;
     top: 30%;
+    margin-bottom: 2%;
 }
 
 #quote{
     height: 200px;
     width: 500px;
     top: 50%;
-    color: black;
     border: 1px solid black;
+    z-index: 1000;
+}
+
+.userBox{
+    color: black;
+    z-index: 5000;
 }
 
 .links{

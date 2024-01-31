@@ -1,5 +1,6 @@
 console.log("hello world");
 
+let currentIndex = 0;
 const slide = document.getElementById("slide"); 
 const quote = document.getElementById("quote");
 const homeBTN = document.getElementById("homeBTN");
@@ -8,9 +9,9 @@ const skillBTN = document.getElementById("skillBTN");
 const meBTN = document.getElementById("meBTN");
 const api_url = "https://type.fit/api/quotes";
 const images = [
-    "./img/selfe.jpg",
-    "./img/Paul+Fox.png",
-    "./img/quote.png"
+    "./img/me(2).jpg",
+    "./img/me(1).jpg",
+    "./img/selfe.jpg"
 ]
 
 homeBTN.addEventListener("click", () => {
@@ -70,8 +71,6 @@ function loadUser(quotes){
     quote.innerHTML = html;
 }
 
-let currentIndex = 0;
-
 function myTimer(){
     currentIndex++;
 
@@ -83,4 +82,4 @@ function myTimer(){
 
 }
 
-setInterval(myTimer, 3000);
+setInterval(myTimer, 1000);
