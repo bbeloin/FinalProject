@@ -36,7 +36,7 @@ async function getapi(url) {
 
     var data = await response.json();
     console.log(data);
-    loadUser(data.results)
+    loadUser(data)
     
 }
 
@@ -44,7 +44,7 @@ getapi(api_url);
 
 function loadUser(quotes){
     let html = ``;
-
+    
     for (let key in quotes){
         let quote = quotes[key];
 
@@ -64,7 +64,8 @@ function loadUser(quotes){
         `;
         html += userHTML;
 
-        // console.log(html);
+        console.log(html);
+        console.log(quotes)
 
     }
 
@@ -80,6 +81,7 @@ function myTimer(){
 
     slide.src = images[currentIndex];
 
+
 }
 
-setInterval(myTimer, 1000);
+setInterval(myTimer, 50000);
