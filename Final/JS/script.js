@@ -44,7 +44,8 @@ getapi(api_url);
 
 function loadUser(quotes){
     let html = ``;
-    
+    var randNum = Math.floor( Math.random() * quotes.length ) + 1;
+
     for (let key in quotes){
         let quote = quotes[key];
 
@@ -64,12 +65,12 @@ function loadUser(quotes){
         `;
         html += userHTML;
 
-        console.log(html);
-        console.log(quotes)
-
     }
 
-    quote.innerHTML = html;
+    console.log("randnum: " + randNum);
+    quote.innerHTML = randNum(html);
+    console.log("quote: " + quote);
+    console.log("html: " + html);
 }
 
 function myTimer(){
@@ -84,4 +85,4 @@ function myTimer(){
 
 }
 
-setInterval(myTimer, 50000);
+setInterval(myTimer, 5000);
